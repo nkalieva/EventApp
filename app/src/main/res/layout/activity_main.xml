@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0DCE6"> <!-- Фон будет назначен для всего RelativeLayout -->
+
+    <!-- Заголовок страницы -->
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#80DEEA"
+        android:text="Event Liste"
+        android:textColor="#082783"
+        android:textColorLink="#0C20B8"
+        android:textSize="24sp" />
+
+    <!-- ImageView, который будет расположен поверх фона -->
+
+    <!-- RecyclerView для отображения списка событий -->
+
+    <!-- FloatingActionButton для добавления нового события -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="627dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Event Image"
+        android:src="@drawable/pics_image"
+        app:srcCompat="@drawable/pic_image" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEvents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/fabAddEvent"
+        android:layout_below="@id/pageTitle"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="-381dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pageTitle" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="Add Event"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#35C6D3"
+        app:useCompatPadding="true" />
+
+</RelativeLayout>
